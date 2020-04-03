@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Gloaming.DiscordBot.DiscordBot.Models;
+using System.Collections.Generic;
 
 namespace Gloaming.DiscordBot.DiscordBot
 {
@@ -28,6 +29,14 @@ namespace Gloaming.DiscordBot.DiscordBot
             { 19, "The Sun" },
             { 20, "Judgement" },
             { 21, "The World" },
+        };
+
+        public static List<Suit> Suits = new List<Suit>
+        {
+            { new Suit { Name = "Wands", Effect = "2 hits", Trumps = new List<string> { "Swords" } } },
+            { new Suit { Name = "Swords", Effect = "Pressure", Trumps = new List<string> { "Cups" } } },
+            { new Suit { Name = "Cups", Effect = "None", Trumps = new List<string> { "Wands", "Pentacles" } } },
+            { new Suit { Name = "Pentacles", Effect = "No hit, Recover", Trumps = new List<string> { "Wands", "Swords" } } }
         };
     }
 }
